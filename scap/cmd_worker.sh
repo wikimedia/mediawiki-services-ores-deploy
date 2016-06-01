@@ -1,4 +1,4 @@
-venv="/srv/ores/venv"
+venv="/srv/deployment/ores/venv"
 deploy_dir="/srv/deployment/ores/deploy"
 mkdir -p $venv
 virtualenv --python python3 --system-site-packages $venv
