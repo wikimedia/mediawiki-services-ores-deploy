@@ -3,13 +3,13 @@
 	url = https://github.com/wiki-ai/wb-vandalism
 [submodule "submodules/wikiclass"]
 	path = submodules/wikiclass
-	url = https://github.com/wiki-ai/wikiclass
+	url = https://gerrit.wikimedia.org/r/mediawiki/services/ores/wikiclass.git
 [submodule "submodules/editquality"]
 	path = submodules/editquality
-	url = https://github.com/wiki-ai/editquality
+	url = https://gerrit.wikimedia.org/r/mediawiki/services/ores/editquality.git
 [submodule "submodules/wheels"]
 	path = submodules/wheels
 	url = https://gerrit.wikimedia.org/r/research/ores/wheels.git
 [submodule "submodules/ores"]
 	path = submodules/ores
-	url = https://github.com/wiki-ai/ores
+	url = https://gerrit.wikimedia.org/r/mediawiki/services/ores.git
