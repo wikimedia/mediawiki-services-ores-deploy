@@ -7,8 +7,8 @@ import yamlconf
 
 from ores.score_processors import Celery
 
-config_paths = sorted(glob.glob("config/*.yaml") +
-                      glob.glob("/etc/ores/*.yaml"))
+config_paths = (sorted(glob.glob("config/*.yaml")) +
+                sorted(glob.glob("/etc/ores/*.yaml")))
 
 config = yamlconf.load(*(open(p) for p in config_paths))
 
