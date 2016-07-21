@@ -200,8 +200,14 @@ scoring_contexts:
     extractor: plwiki_api
     scorer_models:
       reverted: plwiki_revert
+      damaging: plwiki_damaging
+      goodfaith: plwiki_goodfaith
     precache:
       reverted:
+        "on": ["edit"]
+      damaging:
+        "on": ["edit"]
+      goodfaith:
         "on": ["edit"]
   ptwiki:
     extractor: ptwiki_api
