@@ -66,7 +66,7 @@ score_processors:
     CELERY_ACCEPT_CONTENT: ['pickle']
     CELERY_TASK_SERIALIZER: 'pickle'
     CELERY_RESULT_SERIALIZER: 'pickle'
-    CELERYD_CONCURRENCY: 16
+    CELERYD_CONCURRENCY: 24
     CELERYD_MAX_TASKS_PER_CHILD: 100
     timeout: 15 # seconds
     queue_maxsize: 100 # pending tasks
