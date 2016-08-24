@@ -230,14 +230,6 @@ scoring_contexts:
         "on": ["edit"]
       goodfaith:
         "on": ["edit"]
-  testwiki:
-    extractor: testwiki_offline
-    scorer_models:
-      reverted: testwiki_revert
-      damaging: testwiki_revert
-    precache:
-      reverted:
-        "on": ["edit"]
   ruwiki:
     extractor: ruwiki_api
     scorer_models:
@@ -256,6 +248,14 @@ scoring_contexts:
     extractor: svwiki_api
     scorer_models:
       reverted: svwiki_revert
+    precache:
+      reverted:
+        "on": ["edit"]
+  testwiki:
+    extractor: testwiki_offline
+    scorer_models:
+      reverted: testwiki_revert
+      damaging: testwiki_revert
     precache:
       reverted:
         "on": ["edit"]
@@ -429,7 +429,7 @@ scorer_models:
     model_file: submodules/editquality/models/svwiki.reverted.gradient_boosting.model
   testwiki_revert:
     class: ores.scorer_models.RevIdScorer
-    version: 0.0.2
+    version: 0.0.3
   trwiki_damaging:
     model_file: submodules/editquality/models/trwiki.damaging.gradient_boosting.model
   trwiki_goodfaith:
