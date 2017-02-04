@@ -1,12 +1,16 @@
 [submodule "submodules/wheels"]
 	path = submodules/wheels
-	url = https://phabricator.wikimedia.org/diffusion/1915/research-ores-deploy-wheels.git
+	url = ssh://vcs@git-ssh.wikimedia.org/diffusion/1915/research-ores-deploy-wheels.git
 [submodule "submodules/ores"]
 	path = submodules/ores
-	url = https://phabricator.wikimedia.org/diffusion/1912/research-ores-ores.git
+	url = ssh://vcs@git-ssh.wikimedia.org/diffusion/1912/research-ores-ores.git
 [submodule "submodules/editquality"]
 	path = submodules/editquality
-	url = https://phabricator.wikimedia.org/diffusion/1913/research-ores-editquality.git
+	url = ssh://vcs@git-ssh.wikimedia.org/diffusion/1913/research-ores-editquality.git
 [submodule "submodules/wikiclass"]
 	path = submodules/wikiclass
-	url = https://phabricator.wikimedia.org/diffusion/1914/research-ores-wikiclass.git
+	url = ssh://vcs@git-ssh.wikimedia.org/diffusion/1914/research-ores-wikiclass.git
+
+[submodule "submodules/draftquality"]
+	path = submodules/draftquality
+	url = ssh://vcs@git-ssh.wikimedia.org/diffusion/2047/ores-draftquality.git
