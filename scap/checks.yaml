@@ -11,3 +11,9 @@ checks:
     group: web
     timeout: 300
     command: bash /srv/deployment/ores/deploy/scap/cmd_worker.sh
+  canary_checks:
+    type: command
+    stage: promote
+    timeout: 300
+    group: canary
+    command: bash /srv/deployment/ores/deploy/scap/cmd_worker.sh
