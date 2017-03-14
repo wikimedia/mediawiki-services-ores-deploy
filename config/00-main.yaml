@@ -40,8 +40,10 @@ scoring_systems:
       - enwiki
       - enwiktionary
       - eswiki
+      - eswikibooks
       - etwiki
       - fawiki
+      - fiwiki
       - frwiki
       - hewiki
       - huwiki
@@ -136,12 +138,25 @@ scoring_contexts:
     precache:
       reverted:
         "on": ["edit"]
+  eswikibooks:
+    extractor: eswikibooks_api
+    scorer_models:
+      reverted: eswikibooks_revert
+    precache:
+      reverted:
+        "on": ["edit"]
   etwiki:
     extractor: etwiki_api
     scorer_models:
       reverted: etwiki_revert
+      damaging: etwiki_damaging
+      goodfaith: etwiki_goodfaith
     precache:
       reverted:
+        "on": ["edit"]
+      damaging:
+        "on": ["edit"]
+      goodfaith:
         "on": ["edit"]
   fawiki:
     extractor: fawiki_api
@@ -155,6 +170,13 @@ scoring_contexts:
       reverted:
         "on": ["edit"]
       goodfaith:
+        "on": ["edit"]
+  fiwiki:
+    extractor: fiwiki_api
+    scorer_models:
+      reverted: fiwiki_revert
+    precache:
+      reverted:
         "on": ["edit"]
   frwiki:
     extractor: frwiki_api
@@ -271,6 +293,7 @@ scoring_contexts:
     scorer_models:
       reverted: testwiki_revert
       damaging: testwiki_revert
+      goodfaith: testwiki_revert
     precache:
       reverted:
         "on": ["edit"]
@@ -333,10 +356,14 @@ extractors:
     host: https://en.wiktionary.org
   eswiki_api:
     host: https://es.wikipedia.org
+  eswikibooks_api:
+    host: https://es.wikibooks.org
   etwiki_api:
     host: https://et.wikipedia.org
   fawiki_api:
     host: https://fa.wikipedia.org
+  fiwiki_api:
+    host: https://fi.wikipedia.org
   frwiki_api:
     host: https://fr.wikipedia.org
   hewiki_api:
@@ -400,14 +427,22 @@ scorer_models:
     model_file: submodules/editquality/models/enwiktionary.reverted.rf.model
   eswiki_revert:
     model_file: submodules/editquality/models/eswiki.reverted.gradient_boosting.model
+  eswikibooks_revert:
+    model_file: submodules/editquality/models/eswikibooks.reverted.gradient_boosting.model
   etwiki_revert:
     model_file: submodules/editquality/models/etwiki.reverted.gradient_boosting.model
+  etwiki_damaging:
+    model_file: submodules/editquality/models/etwiki.damaging.gradient_boosting.model
+  etwiki_goodfaith:
+    model_file: submodules/editquality/models/etwiki.goodfaith.gradient_boosting.model
   fawiki_damaging:
     model_file: submodules/editquality/models/fawiki.damaging.gradient_boosting.model
   fawiki_goodfaith:
     model_file: submodules/editquality/models/fawiki.goodfaith.gradient_boosting.model
   fawiki_revert:
     model_file: submodules/editquality/models/fawiki.reverted.gradient_boosting.model
+  fiwiki_revert:
+    model_file: submodules/editquality/models/fiwiki.reverted.gradient_boosting.model
   frwiki_revert:
     model_file: submodules/editquality/models/frwiki.reverted.gradient_boosting.model
   frwiki_wp10:
