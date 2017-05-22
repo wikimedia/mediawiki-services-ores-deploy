@@ -190,6 +190,8 @@ scoring_contexts:
     scorer_models:
       reverted: frwiki_revert
       wp10: frwiki_wp10
+      damaging: frwiki_damaging
+      goodfaith: frwiki_goodfaith
     precache:
       reverted:
         "on": ["edit"]
@@ -350,6 +352,7 @@ scoring_contexts:
       reverted: wikidata_revert
       damaging: wikidata_damaging
       goodfaith: wikidata_goodfaith
+      item_quality: wikidata_item_quality
     precache:
       damaging:
         "on": ["edit"]
@@ -471,6 +474,10 @@ scorer_models:
     model_file: submodules/editquality/models/fiwiki.goodfaith.gradient_boosting.model
   frwiki_revert:
     model_file: submodules/editquality/models/frwiki.reverted.gradient_boosting.model
+  frwiki_damaging:
+    model_file: submodules/editquality/models/frwiki.damaging.gradient_boosting.model
+  frwiki_goodfaith:
+    model_file: submodules/editquality/models/frwiki.goodfaith.gradient_boosting.model
   frwiki_wp10:
     model_file: submodules/wikiclass/models/frwiki.wp10.gradient_boosting.model
   hewiki_revert:
@@ -538,3 +545,5 @@ scorer_models:
     model_file: submodules/editquality/models/wikidatawiki.goodfaith.gradient_boosting.model
   wikidata_revert:
     model_file: submodules/editquality/models/wikidatawiki.reverted.gradient_boosting.model
+  wikidata_item_quality:
+    model_file: submodules/wikiclass/models/wikidatawiki.item_quality.rf.model
