@@ -1,6 +1,6 @@
 [submodule "submodules/wheels"]
 	path = submodules/wheels
-	url = https://phabricator.wikimedia.org/source/wheels.git
+	url = https://phabricator.wikimedia.org/source/ores-deploy-wheels.git
 [submodule "submodules/ores"]
 	path = submodules/ores
 	url = https://phabricator.wikimedia.org/source/ores.git
