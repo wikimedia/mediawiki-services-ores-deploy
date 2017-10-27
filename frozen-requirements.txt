@@ -25,7 +25,7 @@ mwapi==0.5.1
 mwcli==0.0.2
 mwparserfromhell==0.4.3
 mwreverts==0.0.6
-mwtypes==0.2.0
+mwtypes==0.3.0
 mwxml==0.2.1
 mysqltsv==0.0.7
 nltk==3.0.5
