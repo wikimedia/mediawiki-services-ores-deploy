@@ -466,7 +466,6 @@ extractors:
     host: https://vi.wikipedia.org
   wikidata_api:
     host: https://wikidata.org
-    timeout: 15
 
 # Scorer models
 scorer_models:
