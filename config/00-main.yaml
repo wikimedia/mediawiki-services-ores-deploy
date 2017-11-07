@@ -471,7 +471,7 @@ extractors:
 # Scorer models
 scorer_models:
   defaults:
-    class: revscoring.scorer_models.MLScorerModel
+    class: revscoring.Model
   arwiki_revert:
     model_file: submodules/editquality/models/arwiki.reverted.gradient_boosting.model
   bnwiki_revert:
