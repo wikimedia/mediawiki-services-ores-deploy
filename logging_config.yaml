@@ -8,7 +8,7 @@ loggers:
     level: ERROR
     handlers: [file]
   celery:
-    level: INFO
+    level: ERROR
     handlers: [file]
 
 handlers:
