@@ -46,6 +46,7 @@ scoring_systems:
       - elwiki
       - eswikibooks
       - eswiki
+      - eswikiquote
       - etwiki
       - fawiki
       - fiwiki
@@ -55,6 +56,7 @@ scoring_systems:
       - hrwiki
       - huwiki
       - idwiki
+      - iswiki
       - itwiki
       - kowiki
       - nlwiki
@@ -168,6 +170,13 @@ scoring_contexts:
         "on": ["edit"]
       goodfaith:
         "on": ["edit"]
+  eswikiquote:
+    extractor: eswikiquote_api
+    scorer_models:
+      reverted: eswikiquote_revert
+    precache:
+      reverted:
+        "on": ["edit"]
   etwiki:
     extractor: etwiki_api
     scorer_models:
@@ -244,6 +253,13 @@ scoring_contexts:
     extractor: idwiki_api
     scorer_models:
       reverted: idwiki_revert
+    precache:
+      reverted:
+        "on": ["edit"]
+  iswiki:
+    extractor: iswiki_api
+    scorer_models:
+      reverted: iswiki_revert
     precache:
       reverted:
         "on": ["edit"]
@@ -428,6 +444,8 @@ extractors:
     host: https://es.wikipedia.org
   eswikibooks_api:
     host: https://es.wikibooks.org
+  eswikiquote_api:
+    host: https://es.wikiquote.org
   etwiki_api:
     host: https://et.wikipedia.org
   fawiki_api:
@@ -446,6 +464,8 @@ extractors:
     host: https://hu.wikipedia.org
   idwiki_api:
     host: https://id.wikipedia.org
+  iswiki_api:
+    host: https://is.wikipedia.org
   itwiki_api:
     host: https://it.wikipedia.org
   kowiki_api:
@@ -515,6 +535,8 @@ scorer_models:
     model_file: submodules/editquality/models/eswikibooks.damaging.gradient_boosting.model
   eswikibooks_goodfaith:
     model_file: submodules/editquality/models/eswikibooks.goodfaith.gradient_boosting.model
+  eswikiquote_revert:
+    model_file: submodules/editquality/models/eswikiquote.reverted.gradient_boosting.model
   etwiki_damaging:
     model_file: submodules/editquality/models/etwiki.damaging.gradient_boosting.model
   etwiki_goodfaith:
@@ -545,6 +567,8 @@ scorer_models:
     model_file: submodules/editquality/models/huwiki.reverted.rf.model
   idwiki_revert:
     model_file: submodules/editquality/models/idwiki.reverted.gradient_boosting.model
+  iswiki_revert:
+    model_file: submodules/editquality/models/iswiki.reverted.gradient_boosting.model
   itwiki_revert:
     model_file: submodules/editquality/models/itwiki.reverted.gradient_boosting.model
   jawiki_revert:
