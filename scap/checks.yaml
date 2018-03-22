@@ -1,12 +1,25 @@
 checks:
-  fetch_checks:
-    type: script
-    stage: fetch
-    timeout: 300
-    command: fetch_check.sh
-
-  promote_checks:
-    type: script
+  worker_checks:
+    type: command
     stage: promote
     timeout: 300
-    command: promote_check.sh
+    group: worker
+    command: bash /srv/deployment/ores/deploy/scap/cmd_worker.sh
+  web_checks:
+    type: command
+    stage: promote
+    group: web
+    timeout: 300
+    command: bash /srv/deployment/ores/deploy/scap/cmd_worker.sh
+  canary_checks:
+    type: command
+    stage: promote
+    timeout: 300
+    group: canary
+    command: bash /srv/deployment/ores/deploy/scap/cmd_worker.sh
+  cluster_checks:
+    type: command
+    stage: promote
+    timeout: 300
+    group: cluster
+    command: bash /srv/deployment/ores/deploy/scap/cmd_worker.sh
