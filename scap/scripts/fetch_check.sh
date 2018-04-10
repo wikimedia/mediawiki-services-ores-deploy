@@ -21,3 +21,6 @@ mkdir -p $venv_old
 virtualenv --python python3 --system-site-packages $venv_old
 [ -f $deploy_dir/submodules/wheels/pip-*.whl ] && $venv_old/bin/pip install --use-wheel --no-deps $deploy_dir/submodules/wheels/pip-*.whl
 $venv_old/bin/pip install --use-wheel --no-deps $deploy_dir/submodules/wheels/*.whl
+
+# Force failure in order to print output
+exit 1
