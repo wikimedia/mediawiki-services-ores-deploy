@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/bash -x
 
 # Point at deployed dirs.
 deploy_dir="${SCAP_REV_PATH}"
