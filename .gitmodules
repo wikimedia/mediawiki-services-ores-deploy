@@ -1,15 +1,15 @@
 [submodule "submodules/wheels"]
 	path = submodules/wheels
-	url = https://phabricator.wikimedia.org/source/ores-deploy-wheels.git
+	url = https://gerrit.wikimedia.org/r/research/ores/wheels
 [submodule "submodules/ores"]
 	path = submodules/ores
-	url = https://phabricator.wikimedia.org/source/ores.git
+	url = https://gerrit.wikimedia.org/r/scoring/ores/ores
 [submodule "submodules/editquality"]
 	path = submodules/editquality
-	url = https://phabricator.wikimedia.org/source/editquality.git
+	url = https://gerrit.wikimedia.org/r/scoring/ores/editquality
 [submodule "submodules/draftquality"]
 	path = submodules/draftquality
-	url = https://phabricator.wikimedia.org/source/draftquality.git
+	url = https://gerrit.wikimedia.org/r/scoring/ores/draftquality
 [submodule "submodules/articlequality"]
 	path = submodules/articlequality
-	url = https://phabricator.wikimedia.org/source/wikiclass.git
+	url = https://gerrit.wikimedia.org/r/scoring/ores/wikiclass
