@@ -34,13 +34,13 @@ mwapi==0.5.1
 mwbase==0.0.6
 mwcli==0.0.2
 mwparserfromhell==0.5.1
-mwreverts==0.1.5
+mwreverts==0.0.6
 mwtypes==0.3.0
 mwxml==0.3.3
 mysqltsv==0.0.7
 nltk==3.0.5
 numpy==1.14.2
-para==0.0.6
+para==0.0.5
 py==1.5.3
 pycodestyle==2.3.1
 pyenchant==1.6.11
@@ -59,6 +59,7 @@ scipy==1.0.1
 six==1.11.0
 smart-open==1.5.7
 sseclient==0.0.19
+statistics==1.0.3.5
 statsd==3.2.2
 stopit==1.1.2
 tabulate==0.7.7

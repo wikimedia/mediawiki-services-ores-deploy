@@ -8,6 +8,7 @@ REQUIREMENTS_FILES = \
 	submodules/wikiclass/requirements.txt \
 	requirements.txt
 
+# FIXME: setuptools somehow isn't omitted.
 OMIT_WHEELS = \
 	ores \
 	draftquality \

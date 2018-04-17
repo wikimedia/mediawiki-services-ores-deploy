@@ -7,10 +7,9 @@
 [submodule "submodules/editquality"]
 	path = submodules/editquality
 	url = https://phabricator.wikimedia.org/source/editquality.git
-[submodule "submodules/wikiclass"]
-	path = submodules/wikiclass
-	url = https://phabricator.wikimedia.org/source/wikiclass.git
-
 [submodule "submodules/draftquality"]
 	path = submodules/draftquality
 	url = https://phabricator.wikimedia.org/source/draftquality.git
+[submodule "submodules/articlequality"]
+	path = submodules/articlequality
+	url = https://phabricator.wikimedia.org/source/wikiclass.git
