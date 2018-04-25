@@ -39,6 +39,7 @@ scoring_systems:
     scoring_contexts:
       - arwiki
       - bnwiki
+      - cawiki
       - cswiki
       - dewiki
       - enwiki
@@ -59,6 +60,7 @@ scoring_systems:
       - iswiki
       - itwiki
       - kowiki
+      - lvwiki
       - nlwiki
       - nowiki
       - plwiki
@@ -98,9 +100,12 @@ scoring_contexts:
   arwiki:
     extractor: arwiki_api
     scorer_models:
-      reverted: arwiki_revert
+      damaging: arwiki_damaging
+      goodfaith: arwiki_goodfaith
     precache:
-      reverted:
+      damaging:
+        "on": ["edit"]
+      goodfaith:
         "on": ["edit"]
   bnwiki:
     extractor: bnwiki_api
@@ -108,6 +113,16 @@ scoring_contexts:
       reverted: bnwiki_revert
     precache:
       reverted:
+        "on": ["edit"]
+  cawiki:
+    extractor: cawiki_api
+    scorer_models:
+      damaging: cawiki_damaging
+      goodfaith: cawiki_goodfaith
+    precache:
+      damaging:
+        "on": ["edit"]
+      goodfaith:
         "on": ["edit"]
   cswiki:
     extractor: cswiki_api
@@ -245,9 +260,12 @@ scoring_contexts:
   huwiki:
     extractor: huwiki_api
     scorer_models:
-      reverted: huwiki_revert
+      damaging: huwiki_damaging
+      goodfaith: huwiki_goodfaith
     precache:
-      reverted:
+      damaging:
+        "on": ["edit"]
+      goodfaith:
         "on": ["edit"]
   idwiki:
     extractor: idwiki_api
@@ -276,6 +294,16 @@ scoring_contexts:
       reverted: kowiki_revert
     precache:
       reverted:
+        "on": ["edit"]
+  lvwiki:
+    extractor: lvwiki_api
+    scorer_models:
+      damaging: lvwiki_damaging
+      goodfaith: lvwiki_goodfaith
+    precache:
+      damaging:
+        "on": ["edit"]
+      goodfaith:
         "on": ["edit"]
   nlwiki:
     extractor: nlwiki_api
@@ -430,6 +458,8 @@ extractors:
     host: https://ar.wikipedia.org
   bnwiki_api:
     host: https://bn.wikipedia.org
+  cawiki_api:
+    host: https://ca.wikipedia.org
   cswiki_api:
     host: https://cs.wikipedia.org
   dewiki_api:
@@ -470,6 +500,8 @@ extractors:
     host: https://it.wikipedia.org
   kowiki_api:
     host: https://ko.wikipedia.org
+  lvwiki_api:
+    host: https://lv.wikipedia.org
   nlwiki_api:
     host: https://nl.wikipedia.org
   nowiki_api:
@@ -505,10 +537,16 @@ extractors:
 scorer_models:
   defaults:
     class: revscoring.Model
-  arwiki_revert:
-    model_file: submodules/editquality/models/arwiki.reverted.gradient_boosting.model
+  arwiki_damaging:
+    model_file: submodules/editquality/models/arwiki.damaging.gradient_boosting.model
+  arwiki_goodfaith:
+    model_file: submodules/editquality/models/arwiki.goodfaith.gradient_boosting.model
   bnwiki_revert:
     model_file: submodules/editquality/models/bnwiki.reverted.gradient_boosting.model
+  cawiki_damaging:
+    model_file: submodules/editquality/models/cawiki.damaging.gradient_boosting.model
+  cawiki_goodfaith:
+    model_file: submodules/editquality/models/cawiki.goodfaith.gradient_boosting.model
   cswiki_damaging:
     model_file: submodules/editquality/models/cswiki.damaging.gradient_boosting.model
   cswiki_goodfaith:
@@ -563,8 +601,10 @@ scorer_models:
     model_file: submodules/editquality/models/hewiki.goodfaith.gradient_boosting.model
   hrwiki_revert:
     model_file: submodules/editquality/models/hrwiki.reverted.gradient_boosting.model
-  huwiki_revert:
-    model_file: submodules/editquality/models/huwiki.reverted.rf.model
+  huwiki_damaging:
+    model_file: submodules/editquality/models/huwiki.damaging.gradient_boosting.model
+  huwiki_goodfaith:
+    model_file: submodules/editquality/models/huwiki.goodfaith.gradient_boosting.model
   idwiki_revert:
     model_file: submodules/editquality/models/idwiki.reverted.gradient_boosting.model
   iswiki_revert:
@@ -575,6 +615,10 @@ scorer_models:
     model_file: submodules/editquality/models/jawiki.reverted.gradient_boosting.model
   kowiki_revert:
     model_file: submodules/editquality/models/kowiki.reverted.gradient_boosting.model
+  lvwiki_damaging:
+    model_file: submodules/editquality/models/lvwiki.damaging.gradient_boosting.model
+  lvwiki_goodfaith:
+    model_file: submodules/editquality/models/lvwiki.goodfaith.gradient_boosting.model
   nlwiki_damaging:
     model_file: submodules/editquality/models/nlwiki.damaging.gradient_boosting.model
   nlwiki_goodfaith:
