@@ -558,7 +558,7 @@ scorer_models:
   enwiki_draftquality:
     model_file: submodules/draftquality/models/enwiki.draft_quality.gradient_boosting.model.bz2
   enwiki_wp10:
-    model_file: submodules/wikiclass/models/enwiki.nettrom_wp10.gradient_boosting.model
+    model_file: submodules/articlequality/models/enwiki.nettrom_wp10.gradient_boosting.model
   enwiki_damaging:
     model_file: submodules/editquality/models/enwiki.damaging.gradient_boosting.model
   enwiki_goodfaith:
@@ -592,9 +592,9 @@ scorer_models:
   frwiki_goodfaith:
     model_file: submodules/editquality/models/frwiki.goodfaith.gradient_boosting.model
   frwiki_wp10:
-    model_file: submodules/wikiclass/models/frwiki.wp10.gradient_boosting.model
+    model_file: submodules/articlequality/models/frwiki.wp10.gradient_boosting.model
   frwikisource_pagelevel:
-    model_file: submodules/wikiclass/models/frwikisource.page_level.gradient_boosting.model
+    model_file: submodules/articlequality/models/frwikisource.page_level.gradient_boosting.model
   hewiki_damaging:
     model_file: submodules/editquality/models/hewiki.damaging.rf.model
   hewiki_goodfaith:
@@ -644,7 +644,7 @@ scorer_models:
   ruwiki_goodfaith:
     model_file: submodules/editquality/models/ruwiki.goodfaith.gradient_boosting.model
   ruwiki_wp10:
-    model_file: submodules/wikiclass/models/ruwiki.wp10.gradient_boosting.model
+    model_file: submodules/articlequality/models/ruwiki.wp10.gradient_boosting.model
   sqwiki_damaging:
     model_file: submodules/editquality/models/sqwiki.damaging.gradient_boosting.model
   sqwiki_goodfaith:
@@ -663,7 +663,7 @@ scorer_models:
   trwiki_goodfaith:
     model_file: submodules/editquality/models/trwiki.goodfaith.gradient_boosting.model
   trwiki_wp10:
-    model_file: submodules/wikiclass/models/trwiki.wp10.gradient_boosting.model
+    model_file: submodules/articlequality/models/trwiki.wp10.gradient_boosting.model
   ukwiki_revert:
     model_file: submodules/editquality/models/ukwiki.reverted.gradient_boosting.model
   viwiki_revert:
@@ -673,4 +673,4 @@ scorer_models:
   wikidata_goodfaith:
     model_file: submodules/editquality/models/wikidatawiki.goodfaith.gradient_boosting.model
   wikidata_itemquality:
-    model_file: submodules/wikiclass/models/wikidatawiki.item_quality.rf.model
+    model_file: submodules/articlequality/models/wikidatawiki.item_quality.rf.model
