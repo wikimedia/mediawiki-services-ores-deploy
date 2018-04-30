@@ -446,7 +446,7 @@ scoring_contexts:
       goodfaith:
         "on": ["nonbot_edit"]
       itemquality:
-        "on": ["nonbot_edit"]
+        "on": ["edit"]
 
 # Feature extractors
 extractors:
