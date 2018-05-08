@@ -16,3 +16,6 @@
 [submodule "submodules/assets"]
 	path = submodules/assets
 	url = https://gerrit.wikimedia.org/r/scoring/ores/assets.git
+[submodule "submodules/drafttopic"]
+	path = submodules/drafttopic
+	url = https://gerrit.wikimedia.org/r/scoring/ores/drafttopic
