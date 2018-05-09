@@ -4,12 +4,8 @@
 deploy_dir="${SCAP_REV_PATH}"
 venv="${deploy_dir}/venv"
 
-# Pull submodules.
-cd $deploy_dir
-git submodule sync
-git submodule update --init
-
 # Install python libs.
+cd $deploy_dir
 mkdir -p $venv
 virtualenv --python python3 --system-site-packages --never-download $venv
 [ -f $deploy_dir/submodules/wheels/pip-*.whl ] && $venv/bin/pip install --use-wheel --no-deps $deploy_dir/submodules/wheels/pip-*.whl
