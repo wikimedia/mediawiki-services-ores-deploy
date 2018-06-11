@@ -35,12 +35,12 @@ mwapi==0.5.1
 mwbase==0.0.6
 mwcli==0.0.2
 mwparserfromhell==0.5.1
-mwreverts==0.0.6
+mwreverts==0.1.5
 mwtypes==0.3.0
 mwxml==0.3.3
 mysqltsv==0.0.7
 nltk==3.0.5
-numpy==1.14.3
+numpy==1.14.4
 para==0.0.5
 py==1.5.3
 pycodestyle==2.3.1
@@ -54,7 +54,7 @@ pywikibase==0.0.5
 PyYAML==3.11
 redis==2.10.6
 requests==2.18.4
-revscoring==2.2.4
+revscoring==2.2.5
 s3transfer==0.1.13
 scikit-learn==0.19.1
 scipy==1.0.1

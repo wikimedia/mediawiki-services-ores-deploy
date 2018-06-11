@@ -2,22 +2,22 @@
 # FIXME: Should assert as much.
 
 REQUIREMENTS_FILES = \
-	submodules/ores/requirements.txt \
+	submodules/articlequality/requirements.txt \
 	submodules/draftquality/requirements.txt \
 	submodules/drafttopic/requirements.txt \
 	submodules/editquality/requirements.txt \
-	submodules/wikiclass/requirements.txt \
+	submodules/ores/requirements.txt \
 	requirements.txt
 
 # FIXME: setuptools somehow isn't omitted.
 OMIT_WHEELS = \
-	ores \
+	articlequality \
 	draftquality \
 	drafttopic \
 	editquality \
-	wikiclass \
-	setuptools \
-	pkg-resources
+	ores \
+	pkg-resources \
+	setuptools
 
 .DEFAULT_GOAL := all
 
