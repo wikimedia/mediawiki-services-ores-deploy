@@ -24,8 +24,9 @@ OMIT_WHEELS = \
 all: clean_env deployment_wheels
 
 clean_env:
-	if [ -n "$$VIRTUAL_ENV" ]; then \
-	  pip freeze | xargs pip uninstall -y; \
+	PURGE_PKGS=`pip freeze | grep -vwE -- "-e|pkg-resources"`; \
+	if [ -n "$$VIRTUAL_ENV" -a "$$PURGE_PKGS" ]; then \
+	  echo "$$PURGE_PKGS" | xargs pip uninstall -y; \
 	fi
 
 pip_install:
