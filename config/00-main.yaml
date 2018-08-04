@@ -434,11 +434,13 @@ scoring_contexts:
       reverted:
         "on": ["edit"]
   testwiki:
-    extractor: testwiki_offline
+    extractor: testwiki_api
     scorer_models:
       reverted: testwiki_revert
       damaging: testwiki_revert
       goodfaith: testwiki_revert
+      wp10: enwiki_wp10
+      draftquality: enwiki_draftquality
     precache: {}
   trwiki:
     extractor: trwiki_api
@@ -557,8 +559,8 @@ extractors:
     host: https://sr.wikipedia.org
   svwiki_api:
     host: https://sv.wikipedia.org
-  testwiki_offline:
-    class: revscoring.extractors.OfflineExtractor
+  testwiki_api:
+    host: https://test.wikipedia.org
   tawiki_api:
     host: https://tr.wikipedia.org
   trwiki_api:
