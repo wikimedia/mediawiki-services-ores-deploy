@@ -3,6 +3,7 @@ logging:
   root:
     handlers:
       - file
+      - logstash
   loggers:
     revscoring:
       level: ERROR
@@ -29,6 +30,8 @@ logging:
       class: logging.handlers.SysLogHandler
       formatter: basic_human
       address: /dev/log
+    logstash:
+      class: ores.logging.LogstashHandler
   formatters:
     basic_human:
       format: "%(asctime)s %(levelname)s %(name)s: %(message)s"
