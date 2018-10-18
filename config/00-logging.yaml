@@ -6,21 +6,21 @@ logging:
       - logstash
   loggers:
     revscoring:
-      level: ERROR
+      level: WARNING
     ores:
-      level: ERROR
+      level: WARNING
     ores.metrics_collectors.logger:
-      level: ERROR
+      level: WARNING
     celery:
-      level: ERROR
+      level: WARNING
     requests:
-      level: ERROR
+      level: WARNING
     revscoring.dependencies.dependent:
-      level: ERROR
+      level: WARNING
     stopit:
-      level: ERROR
+      level: WARNING
     uwsgi:
-      level: ERROR
+      level: WARNING
   handlers:
     file:
       class: logging.handlers.TimedRotatingFileHandler
