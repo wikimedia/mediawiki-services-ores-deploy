@@ -20,7 +20,7 @@ logging:
     stopit:
       level: ERROR
     uwsgi:
-      level: ERRROR
+      level: ERROR
   handlers:
     file:
       class: logging.handlers.TimedRotatingFileHandler
