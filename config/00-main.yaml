@@ -86,17 +86,8 @@ scoring_systems:
     workers: 8
   celery_queue:
     class: ores.scoring_systems.CeleryQueue
-    BROKER_URL: redis://ores-redis-01:6379
-    BROKER_TRANSPORT_OPTIONS: {'socket_timeout': 15} # seconds
-    CELERY_RESULT_BACKEND: redis://ores-redis-01:6379
-    CELERY_ACCEPT_CONTENT: ['pickle']
-    CELERY_TASK_SERIALIZER: 'pickle'
-    CELERY_RESULT_SERIALIZER: 'pickle'
-    CELERYD_CONCURRENCY: 24
-    CELERYD_MAX_TASKS_PER_CHILD: 100
     timeout: 15 # seconds
     queue_maxsize: 100 # pending tasks
-    CELERYD_HIJACK_ROOT_LOGGER: FALSE
 
 # Scorers
 scoring_contexts:
