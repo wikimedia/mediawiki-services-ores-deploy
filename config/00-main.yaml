@@ -93,7 +93,7 @@ scoring_systems:
     result_backend: redis://ores-redis-01:6379
     accept_content: ['pickle', 'json']
     task_serializer: 'pickle'
-    result_serializer: 'pickle'
+    result_serializer: 'json'
     worker_concurrency: 24
     worker_max_tasks_per_child: 100
     worker_hijack_root_logger: FALSE
