@@ -12,7 +12,7 @@
 	url = https://gerrit.wikimedia.org/r/scoring/ores/draftquality
 [submodule "submodules/articlequality"]
 	path = submodules/articlequality
-	url = https://gerrit.wikimedia.org/r/scoring/ores/wikiclass
+	url = https://gerrit.wikimedia.org/r/scoring/ores/articlequality
 [submodule "submodules/assets"]
 	path = submodules/assets
 	url = https://gerrit.wikimedia.org/r/scoring/ores/assets.git
