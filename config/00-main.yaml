@@ -77,7 +77,7 @@ scoring_systems:
       - svwiki
       - testwiki
       - tawiki
-      - translatewiki
+#      - translatewiki
       - trwiki
       - ukwiki
       - viwiki
@@ -476,13 +476,13 @@ scoring_contexts:
       articlequality: enwiki_articlequality
       draftquality: enwiki_draftquality
     precache: {}
-  translatewiki:
-    extractor: translatewiki_api
-    scorer_models:
-      reverted: translatewiki_revert
-    precache:
-      reverted:
-        "on": ["edit"]
+#  translatewiki:
+#    extractor: translatewiki_api
+#    scorer_models:
+#      reverted: translatewiki_revert
+#    precache:
+#      reverted:
+#        "on": ["edit"]
   trwiki:
     extractor: trwiki_api
     scorer_models:
@@ -609,8 +609,8 @@ extractors:
     host: https://test.wikipedia.org
   tawiki_api:
     host: https://tr.wikipedia.org
-  translatewiki_api:
-    host: https://translatewiki.net
+#  translatewiki_api:
+#    host: https://translatewiki.net
   trwiki_api:
     host: https://tr.wikipedia.org
   ukwiki_api:
@@ -765,8 +765,8 @@ scorer_models:
     version: 0.0.3
   tawiki_revert:
     model_file: submodules/editquality/models/tawiki.reverted.gradient_boosting.model
-  translatewiki_revert:
-    model_file: submodules/editquality/models/translatewiki.reverted.gradient_boosting.model
+#  translatewiki_revert:
+#    model_file: submodules/editquality/models/translatewiki.reverted.gradient_boosting.model
   trwiki_damaging:
     model_file: submodules/editquality/models/trwiki.damaging.gradient_boosting.model
   trwiki_goodfaith:
