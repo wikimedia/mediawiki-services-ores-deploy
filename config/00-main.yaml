@@ -94,7 +94,7 @@ scoring_systems:
     broker_url: redis://ores-redis-01:6379
     broker_transport_options: {'socket_timeout': 15} # seconds
     result_backend: redis://ores-redis-01:6379
-    accept_content: ['pickle', 'json']
+    accept_content: ['json']
     task_serializer: 'json'
     result_serializer: 'json'
     worker_concurrency: 24
