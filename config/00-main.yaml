@@ -12,7 +12,7 @@ ores:
   home:
     footer: >
       Hosted by the <a href="//wikimediafoundation.org/">Wikimedia Foundation</a>
-      &amp; written in <a href="//python.org">Python 3</a>.
+      and written in <a href="//python.org">Python 3</a>.
 # Score cache options
 score_caches:
   ores_redis:
