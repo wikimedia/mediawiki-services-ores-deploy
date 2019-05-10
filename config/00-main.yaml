@@ -466,6 +466,7 @@ scoring_contexts:
     scorer_models:
       damaging: svwiki_damaging
       goodfaith: svwiki_goodfaith
+      articlequality: svwiki_articlequality
     precache:
       damaging:
         "on": ["edit"]
