@@ -471,6 +471,8 @@ scoring_contexts:
         "on": ["edit"]
       goodfaith:
         "on": ["edit"]
+      articlequality:
+        "on": ["edit"]
   tawiki:
     extractor: tawiki_api
     scorer_models:
@@ -777,6 +779,8 @@ scorer_models:
     model_file: submodules/editquality/models/srwiki.damaging.gradient_boosting.model
   srwiki_goodfaith:
     model_file: submodules/editquality/models/srwiki.goodfaith.gradient_boosting.model
+  svwiki_articlequality:
+    model_file: submodules/articlequality/models/svwiki.wp10.gradient_boosting.model
   svwiki_damaging:
     model_file: submodules/editquality/models/svwiki.damaging.gradient_boosting.model
   svwiki_goodfaith:
