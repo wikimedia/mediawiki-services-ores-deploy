@@ -83,6 +83,7 @@ scoring_systems:
       - ukwiki
       - viwiki
       - wikidatawiki
+      - zhwiki
   local_single_thread:
     class: ores.scoring_systems.SingleThread
   local_process_pool:
@@ -537,6 +538,17 @@ scoring_contexts:
         "on": ["nonbot_edit"]
       itemquality:
         "on": ["edit"]
+  zhwiki:
+    extractor: zhwiki_api
+    scorer_models:
+      damaging: zhwiki_damaging
+      goodfaith: zhwiki_goodfaith
+    precache:
+      damaging:
+        "on": ["edit"]
+      goodfaith:
+        "on": ["edit"]
+
 
 # Feature extractors
 extractors:
@@ -636,6 +648,8 @@ extractors:
     host: https://vi.wikipedia.org
   wikidata_api:
     host: https://wikidata.org
+  zhwiki_api:
+    host: https://zh.wikipedia.org
 
 # Scorer models
 scorer_models:
@@ -809,3 +823,7 @@ scorer_models:
     model_file: submodules/editquality/models/wikidatawiki.goodfaith.gradient_boosting.model
   wikidata_itemquality:
     model_file: submodules/articlequality/models/wikidatawiki.item_quality.gradient_boosting.model
+  zhwiki_damaging:
+    model_file: submodules/editquality/models/zhwiki.damaging.gradient_boosting.model
+  zhwiki_goodfaith:
+    model_file: submodules/editquality/models/zhwiki.goodfaith.gradient_boosting.model
