@@ -289,8 +289,11 @@ scoring_contexts:
     extractor: glwiki_api
     scorer_models:
       articlequality: glwiki_articlequality
+      reverted: glwiki_revert
     precache:
       articlequality:
+        "on": ["edit"]
+      reverted:
         "on": ["edit"]
   hewiki:
     extractor: hewiki_api
@@ -735,6 +738,8 @@ scorer_models:
     model_file: submodules/articlequality/models/frwikisource.page_level.gradient_boosting.model
   glwiki_articlequality:
     model_file: submodules/articlequality/models/glwiki.wp10.gradient_boosting.model
+  glwiki_revert:
+    model_file: submodules/editquality/models/glwiki.reverted.gradient_boosting.model
   hewiki_damaging:
     model_file: submodules/editquality/models/hewiki.damaging.rf.model
   hewiki_goodfaith:
