@@ -714,7 +714,7 @@ scorer_models:
   etwiki_goodfaith:
     model_file: submodules/editquality/models/etwiki.goodfaith.gradient_boosting.model
   euwiki_articlequality:
-    model_file: submodules/articlequality/models/euwiki.wp10.gradient_boosting.model
+    model_file: submodules/articlequality/models/euwiki.wp10.random_forest.model
   fawiki_damaging:
     model_file: submodules/editquality/models/fawiki.damaging.gradient_boosting.model
   fawiki_goodfaith:
