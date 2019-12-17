@@ -183,7 +183,7 @@ scoring_contexts:
       damaging:
         "on": ["edit"]
       drafttopic:
-        "on": ["page_creation"]
+        "on": ["page_creation", "content_edit"]
       goodfaith:
         "on": ["edit"]
   enwiktionary:
@@ -389,9 +389,12 @@ scoring_contexts:
   nowiki:
     extractor: nowiki_api
     scorer_models:
-      reverted: nowiki_revert
+      damaging: nowiki_damaging
+      goodfaith: nowiki_goodfaith
     precache:
-      reverted:
+      damaging:
+        "on": ["edit"]
+      goodfaith:
         "on": ["edit"]
   plwiki:
     extractor: plwiki_api
@@ -774,8 +777,10 @@ scorer_models:
     model_file: submodules/editquality/models/nlwiki.damaging.gradient_boosting.model
   nlwiki_goodfaith:
     model_file: submodules/editquality/models/nlwiki.goodfaith.gradient_boosting.model
-  nowiki_revert:
-    model_file: submodules/editquality/models/nowiki.reverted.gradient_boosting.model
+  nowiki_damaging:
+    model_file: submodules/editquality/models/nowiki.damaging.gradient_boosting.model
+  nowiki_goodfaith:
+    model_file: submodules/editquality/models/nowiki.goodfaith.gradient_boosting.model
   plwiki_damaging:
     model_file: submodules/editquality/models/plwiki.damaging.gradient_boosting.model
   plwiki_goodfaith:
