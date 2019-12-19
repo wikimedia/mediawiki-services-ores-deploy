@@ -183,7 +183,7 @@ scoring_contexts:
       damaging:
         "on": ["edit"]
       drafttopic:
-        "on": ["page_creation", "content_edit"]
+        "on": ["page_creation", "main_edit"]
       goodfaith:
         "on": ["edit"]
   enwiktionary:
