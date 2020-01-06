@@ -177,13 +177,16 @@ scoring_contexts:
       articlequality: enwiki_articlequality
       draftquality: enwiki_draftquality
       drafttopic: enwiki_drafttopic
+      articletopic: enwiki_articletopic
       damaging: enwiki_damaging
       goodfaith: enwiki_goodfaith
     precache:
       damaging:
         "on": ["edit"]
       drafttopic:
-        "on": ["page_creation", "main_edit"]
+        "on": ["page_creation"]
+      articletopic:
+        "on": ["main_edit"]
       goodfaith:
         "on": ["edit"]
   enwiktionary:
@@ -692,6 +695,8 @@ scorer_models:
     model_file: submodules/draftquality/models/enwiki.draft_quality.gradient_boosting.model.bz2
   enwiki_drafttopic:
     model_file: submodules/drafttopic/models/enwiki.drafttopic.gradient_boosting.model
+  enwiki_articletopic:
+    model_file: submodules/drafttopic/models/enwiki.articletopic.gradient_boosting.model
   enwiki_articlequality:
     model_file: submodules/articlequality/models/enwiki.nettrom_wp10.gradient_boosting.model
   enwiki_damaging:
