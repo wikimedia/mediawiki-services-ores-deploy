@@ -423,6 +423,8 @@ scoring_contexts:
     scorer_models:
       damaging: ptwiki_damaging
       goodfaith: ptwiki_goodfaith
+      articlequality: ptwiki_articlequality
+      draftquality: ptwiki_draftquality
     precache:
       damaging:
         "on": ["edit"]
@@ -812,6 +814,10 @@ scorer_models:
     model_file: submodules/editquality/models/ptwiki.damaging.gradient_boosting.model
   ptwiki_goodfaith:
     model_file: submodules/editquality/models/ptwiki.goodfaith.gradient_boosting.model
+  ptwiki_draftquality:
+    model_file: submodules/draftquality/models/ptwiki.draft_quality.gradient_boosting.model.bz2
+  ptwiki_articlequality:
+    model_file: submodules/articlequality/models/ptwiki.wp10.gradient_boosting.model
   rowiki_revert:
     model_file: submodules/editquality/models/rowiki.reverted.gradient_boosting.model
   rowiki_damaging:
