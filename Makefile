@@ -21,7 +21,7 @@ OMIT_WHEELS = \
 
 .DEFAULT_GOAL := all
 
-all: clean_env deployment_wheels
+all: clean_env clean_wheels_dir deployment_wheels
 
 clean_env:
 	PURGE_PKGS=`pip freeze | grep -vwE -- "-e|pkg-resources"`; \
@@ -30,8 +30,8 @@ clean_env:
 	fi
 
 pip_install:
-	pip install wheel
-	pip install --upgrade pip
+	pip install wheel && \
+	pip install --upgrade pip && \
 	for req_txt in $(REQUIREMENTS_FILES); do \
 	  pip install -r $$req_txt; \
 	done
@@ -43,4 +43,5 @@ frozen-requirements.txt: pip_install
 
 deployment_wheels: frozen-requirements.txt
 	mkdir -p wheels && \
+        rm wheels/*.whl -f && \
 	pip wheel -r frozen-requirements.txt -w wheels

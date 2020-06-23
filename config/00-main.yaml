@@ -537,9 +537,12 @@ scoring_contexts:
   ukwiki:
     extractor: ukwiki_api
     scorer_models:
-      reverted: ukwiki_revert
+      damaging: ukwiki_damaging
+      goodfaith: ukwiki_goodfaith
     precache:
-      reverted:
+      damaging:
+        "on": ["edit"]
+      goodfaith:
         "on": ["edit"]
   viwiki:
     extractor: viwiki_api
@@ -857,8 +860,10 @@ scorer_models:
     model_file: submodules/editquality/models/trwiki.goodfaith.gradient_boosting.model
   trwiki_articlequality:
     model_file: submodules/articlequality/models/trwiki.wp10.gradient_boosting.model
-  ukwiki_revert:
-    model_file: submodules/editquality/models/ukwiki.reverted.gradient_boosting.model
+  ukwiki_damaging:
+    model_file: submodules/editquality/models/ukwiki.damaging.gradient_boosting.model
+  ukwiki_goodfaith:
+    model_file: submodules/editquality/models/ukwiki.goodfaith.gradient_boosting.model
   viwiki_revert:
     model_file: submodules/editquality/models/viwiki.reverted.gradient_boosting.model
   viwiki_articletopic:
