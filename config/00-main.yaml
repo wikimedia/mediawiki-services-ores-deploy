@@ -512,9 +512,13 @@ scoring_contexts:
       damaging: testwiki_revert
       goodfaith: testwiki_revert
       wp10: enwiki_articlequality
+      articletopic: enwiki_articletopic
+      drafttopic: enwiki_drafttopic
       articlequality: enwiki_articlequality
       draftquality: enwiki_draftquality
-    precache: {}
+    precache:
+      articletopic:
+        "on": ["main_edit"]
 #  translatewiki:
 #    extractor: translatewiki_api
 #    scorer_models:
