@@ -671,7 +671,9 @@ extractors:
   svwiki_api:
     host: https://sv.wikipedia.org
   testwiki_api:
-    host: https://test.wikipedia.org
+    host: http://localhost:6500
+    headers:
+      Host: https://test.wikipedia.org
   tawiki_api:
     host: https://tr.wikipedia.org
 #  translatewiki_api:
