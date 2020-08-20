@@ -729,7 +729,7 @@ extractors:
       Host: vi.wikipedia.org
   wikidata_api:
     headers:
-      Host: wikidata.org
+      Host: www.wikidata.org
   zhwiki_api:
     headers:
       Host: zh.wikipedia.org
