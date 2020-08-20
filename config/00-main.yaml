@@ -590,7 +590,7 @@ scoring_contexts:
 extractors:
   defaults:
     class: revscoring.extractors.api.Extractor
-    user_agent: Object Revision Evaluation Service <ahalfaker@wikimedia.org>
+    user_agent: ORES <https://github.com/wikimedia/ores>
     timeout: 5
     # Use Enovy (T244843)
     host: http://localhost:6500
@@ -715,7 +715,7 @@ extractors:
       Host: test.wikipedia.org
   tawiki_api:
     headers:
-      Host: tr.wikipedia.org
+      Host: ta.wikipedia.org
 #  translatewiki_api:
 #    host: https://translatewiki.net
   trwiki_api:
