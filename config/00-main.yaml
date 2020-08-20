@@ -673,7 +673,7 @@ extractors:
   testwiki_api:
     host: http://localhost:6500
     headers:
-      Host: https://test.wikipedia.org
+      Host: test.wikipedia.org
   tawiki_api:
     host: https://tr.wikipedia.org
 #  translatewiki_api:
