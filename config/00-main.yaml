@@ -60,6 +60,7 @@ scoring_systems:
       - hewiki
       - hrwiki
       - huwiki
+      - hywiki
       - idwiki
       - iswiki
       - itwiki
@@ -245,9 +246,12 @@ scoring_contexts:
     scorer_models:
       wp10: euwiki_articlequality
       articlequality: euwiki_articlequality
+      articletopic: euwiki_articletopic
     precache:
       articlequality:
         "on": ["edit"]
+      articletopic:
+        "on": ["main_edit"]
   fawiki:
     extractor: fawiki_api
     scorer_models:
@@ -326,11 +330,21 @@ scoring_contexts:
     scorer_models:
       damaging: huwiki_damaging
       goodfaith: huwiki_goodfaith
+      articletopic: huwiki_articletopic
     precache:
       damaging:
         "on": ["edit"]
       goodfaith:
         "on": ["edit"]
+      articletopic:
+        "on": ["main_edit"]
+  hywiki:
+    extractor: hywiki_api
+    scorer_models:
+      articletopic: hywiki_articletopic
+    precache:
+      articletopic:
+        "on": ["main_edit"]
   idwiki:
     extractor: idwiki_api
     scorer_models:
@@ -393,6 +407,7 @@ scoring_contexts:
     scorer_models:
       damaging: nlwiki_damaging
       goodfaith: nlwiki_goodfaith
+      articlequality: nlwiki_articlequality
     precache:
       damaging:
         "on": ["edit"]
@@ -460,11 +475,14 @@ scoring_contexts:
       draftquality: enwiki_draftquality
       damaging: enwiki_damaging
       goodfaith: enwiki_goodfaith
+      articletopic: enwiki_articletopic
     precache:
       damaging:
         "on": ["edit"]
       goodfaith:
         "on": ["edit"]
+      articletopic:
+        "on": ["main_edit"]
   sqwiki:
     extractor: sqwiki_api
     scorer_models:
@@ -480,11 +498,14 @@ scoring_contexts:
     scorer_models:
       damaging: srwiki_damaging
       goodfaith: srwiki_goodfaith
+      articletopic: srwiki_articletopic
     precache:
       damaging:
         "on": ["edit"]
       goodfaith:
         "on": ["edit"]
+      articletopic:
+        "on": ["main_edit"]
   svwiki:
     extractor: svwiki_api
     scorer_models:
@@ -544,6 +565,7 @@ scoring_contexts:
       damaging: ukwiki_damaging
       goodfaith: ukwiki_goodfaith
       articlequality: ukwiki_articlequality
+      articletopic: ukwiki_articletopic
     precache:
       damaging:
         "on": ["edit"]
@@ -551,6 +573,8 @@ scoring_contexts:
         "on": ["edit"]
       articlequality:
         "on": ["edit"]
+      articletopic:
+        "on": ["main_edit"]
   viwiki:
     extractor: viwiki_api
     scorer_models:
@@ -567,6 +591,7 @@ scoring_contexts:
       damaging: wikidata_damaging
       goodfaith: wikidata_goodfaith
       itemquality: wikidata_itemquality
+      itemtopic: wikidata_itemtopic
     precache:
       damaging:
         "on": ["nonbot_edit"]
@@ -574,6 +599,8 @@ scoring_contexts:
         "on": ["nonbot_edit"]
       itemquality:
         "on": ["edit"]
+      itemtopic:
+        "on": ["main_edit"]
   zhwiki:
     extractor: zhwiki_api
     scorer_models:
@@ -662,6 +689,9 @@ extractors:
   huwiki_api:
     headers:
       Host: hu.wikipedia.org
+  hywiki_api:
+    headers:
+      Host: hy.wikipedia.org
   idwiki_api:
     headers:
       Host: id.wikipedia.org
@@ -798,6 +828,8 @@ scorer_models:
     model_file: submodules/editquality/models/etwiki.goodfaith.gradient_boosting.model
   euwiki_articlequality:
     model_file: submodules/articlequality/models/euwiki.wp10.random_forest.model
+  euwiki_articletopic:
+    model_file: submodules/drafttopic/models/euwiki.articletopic.gradient_boosting.model
   fawiki_damaging:
     model_file: submodules/editquality/models/fawiki.damaging.gradient_boosting.model
   fawiki_goodfaith:
@@ -829,10 +861,14 @@ scorer_models:
     model_file: submodules/editquality/models/hewiki.goodfaith.gradient_boosting.model
   hrwiki_revert:
     model_file: submodules/editquality/models/hrwiki.reverted.gradient_boosting.model
+  huwiki_articletopic:
+    model_file: submodules/drafttopic/models/huwiki.articletopic.gradient_boosting.model
   huwiki_damaging:
     model_file: submodules/editquality/models/huwiki.damaging.gradient_boosting.model
   huwiki_goodfaith:
     model_file: submodules/editquality/models/huwiki.goodfaith.gradient_boosting.model
+  hywiki_articletopic:
+    model_file: submodules/drafttopic/models/hywiki.articletopic.gradient_boosting.model
   idwiki_revert:
     model_file: submodules/editquality/models/idwiki.reverted.gradient_boosting.model
   iswiki_revert:
@@ -855,6 +891,8 @@ scorer_models:
     model_file: submodules/editquality/models/lvwiki.damaging.gradient_boosting.model
   lvwiki_goodfaith:
     model_file: submodules/editquality/models/lvwiki.goodfaith.gradient_boosting.model
+  nlwiki_articlequality:
+    model_file: submodules/articlequality/models/nlwiki.wp10.gradient_boosting.model
   nlwiki_damaging:
     model_file: submodules/editquality/models/nlwiki.damaging.gradient_boosting.model
   nlwiki_goodfaith:
@@ -891,6 +929,8 @@ scorer_models:
     model_file: submodules/editquality/models/sqwiki.damaging.gradient_boosting.model
   sqwiki_goodfaith:
     model_file: submodules/editquality/models/sqwiki.goodfaith.gradient_boosting.model
+  srwiki_articletopic:
+    model_file: submodules/drafttopic/models/srwiki.articletopic.gradient_boosting.model
   srwiki_damaging:
     model_file: submodules/editquality/models/srwiki.damaging.gradient_boosting.model
   srwiki_goodfaith:
@@ -914,6 +954,8 @@ scorer_models:
     model_file: submodules/editquality/models/trwiki.goodfaith.gradient_boosting.model
   trwiki_articlequality:
     model_file: submodules/articlequality/models/trwiki.wp10.gradient_boosting.model
+  ukwiki_articletopic:
+    model_file: submodules/drafttopic/models/ukwiki.articletopic.gradient_boosting.model
   ukwiki_damaging:
     model_file: submodules/editquality/models/ukwiki.damaging.gradient_boosting.model
   ukwiki_goodfaith:
@@ -924,6 +966,8 @@ scorer_models:
     model_file: submodules/editquality/models/viwiki.reverted.gradient_boosting.model
   viwiki_articletopic:
     model_file: submodules/drafttopic/models/viwiki.articletopic.gradient_boosting.model
+  wikidata_itemtopic:
+    model_file: submodules/drafttopic/models/wikidata.articletopic.gradient_boosting.model
   wikidata_damaging:
     model_file: submodules/editquality/models/wikidatawiki.damaging.gradient_boosting.model
   wikidata_goodfaith:
