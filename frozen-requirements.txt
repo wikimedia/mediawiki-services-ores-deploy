@@ -39,7 +39,7 @@ more-itertools==7.2.0
 mwapi==0.5.1
 mwbase==0.1.5
 mwcli==0.0.3
-mwparserfromhell==0.5.4
+mwparserfromhell==0.6.3
 mwreverts==0.1.5
 mwtypes==0.3.2
 mwxml==0.3.3
