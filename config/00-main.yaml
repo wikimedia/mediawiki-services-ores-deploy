@@ -58,6 +58,7 @@ scoring_systems:
       - frwikisource
       - glwiki
       - hewiki
+      - hiwiki
       - hrwiki
       - huwiki
       - hywiki
@@ -313,6 +314,16 @@ scoring_contexts:
     scorer_models:
       damaging: hewiki_damaging
       goodfaith: hewiki_goodfaith
+    precache:
+      damaging:
+        "on": ["edit"]
+      goodfaith:
+        "on": ["edit"]
+  hiwiki:
+    extractor: hiwiki_api
+    scorer_models:
+      damaging: hiwiki_damaging
+      goodfaith: hiwiki_goodfaith
     precache:
       damaging:
         "on": ["edit"]
@@ -683,6 +694,9 @@ extractors:
   hewiki_api:
     headers:
       Host: he.wikipedia.org
+  hiwiki_api:
+    headers:
+      Host: hi.wikipedia.org
   hrwiki_api:
     headers:
       Host: hr.wikipedia.org
@@ -859,6 +873,10 @@ scorer_models:
     model_file: submodules/editquality/models/hewiki.damaging.rf.model
   hewiki_goodfaith:
     model_file: submodules/editquality/models/hewiki.goodfaith.gradient_boosting.model
+  hiwiki_damaging:
+    model_file: submodules/editquality/models/hiwiki.damaging.gradient_boosting.model
+  hiwiki_goodfaith:
+    model_file: submodules/editquality/models/hiwiki.goodfaith.gradient_boosting.model
   hrwiki_revert:
     model_file: submodules/editquality/models/hrwiki.reverted.gradient_boosting.model
   huwiki_articletopic:
