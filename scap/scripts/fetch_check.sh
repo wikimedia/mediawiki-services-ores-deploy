@@ -8,5 +8,5 @@ venv="${deploy_dir}/venv"
 cd $deploy_dir
 mkdir -p $venv
 virtualenv --python python3 --system-site-packages --never-download $venv
-[ -f $deploy_dir/submodules/wheels/pip-*.whl ] && $venv/bin/pip install --use-wheel --no-deps $deploy_dir/submodules/wheels/pip-*.whl
-$venv/bin/pip install --use-wheel --no-deps $deploy_dir/submodules/wheels/*.whl
+[ -f $deploy_dir/submodules/wheels/pip-*.whl ] && $venv/bin/pip install --no-deps $deploy_dir/submodules/wheels/pip-*.whl
+$venv/bin/pip install --no-deps $deploy_dir/submodules/wheels/*.whl
