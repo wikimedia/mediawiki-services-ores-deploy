@@ -48,7 +48,7 @@ PyYAML==5.4
 redis==3.5.3
 regex==2022.1.18
 requests==2.25.1
-revscoring==2.11.1
+revscoring==2.11.4
 scikit-learn==0.22.1
 scipy==1.2.3
 six==1.16.0
